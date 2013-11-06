@@ -31,7 +31,7 @@ class BTCChinaPrice(object):
         data = None
         req = urllib2.Request(self._url)
         try:
-            response = urllib2.urlopen(req, timeout=10)
+            response = urllib2.urlopen(req, timeout=20)
             data = response.read()
             ret = True
         except urllib2.HTTPError, e:
