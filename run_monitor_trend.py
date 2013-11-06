@@ -92,7 +92,7 @@ class TrendMonitor(object):
             if ret:
                 # 判断价格历史数据是否已经过期
                 price_history = self._fresh_pipeline(recs)
-                if len(price_history) < (config.STOP_LOSS_SAMPLE_SPACE / 3):
+                if len(price_history) < (config.STOP_LOSS_SAMPLE_SPACE / 10):
                     logger.info('stop loss sample space is too small %d/%d, skip' % (len(price_history), config.STOP_LOSS_SAMPLE_SPACE))
                     continue
 
