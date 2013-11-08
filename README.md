@@ -60,7 +60,7 @@ _2013-11-08_
 
 ___
 
-_本文档在__[Mou](http://mouapp.com/ “Mou, web developers' Markdown editor for Mac OS X.”)__协助下完成_
+_本文档在__[Mou](http://mouapp.com/ "Mou, web developers' Markdown editor for Mac OS X.")__协助下完成
 
 
 
