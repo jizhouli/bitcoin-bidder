@@ -20,7 +20,7 @@ class SMSGateway(object):
     def __init__(self):
         self._gateway_url = config.SMS_GATEWAY_URL1
         self._tel_list = config.SMS_TEL_LIST
-        self._send_interval = config.SMS_SEND_INTERVAL
+        self._send_interval = config.MIN_INTERVAL_SMS
         self._last_send = 0
         pass
 
@@ -49,7 +49,7 @@ class SMSGateway(object):
     def send(self, msg):
         ret = False
         if not self._check_interval():
-            logger.info('sms send too frequently, cancel - "%s"' % msg)
+            logger.info('sms send operation too frequently, cancel - "%s"' % msg)
             return ret
 
         url = self._gateway_url % (','.join(self._tel_list), msg)

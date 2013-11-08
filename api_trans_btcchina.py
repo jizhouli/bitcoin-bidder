@@ -77,7 +77,7 @@ class BTCChina():
         else:
             # not great error handling....
             print "status:",response.status
-            print "reason:".response.reason
+            print "reason:",response.reason
  
         return None
  

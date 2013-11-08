@@ -3,8 +3,8 @@
  
 import api_trans_btcchina
  
-access_key="46549def-3381-4fa1-91c6-c6166b9db11b"
-secret_key="36db191a-85e8-4f8e-b7e1-81ee460f6f12"
+access_key="46549qrs-3381-4sn1-91p6-p6166o9qo11o"
+secret_key="36qo191n-85r8-4s8r-o7r1-81rr460s6s12"
  
 bc = api_trans_btcchina.BTCChina(access_key,secret_key)
  
