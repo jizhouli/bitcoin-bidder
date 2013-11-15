@@ -63,12 +63,35 @@ class Sqlite3(object):
         return ret, rec_list
 
     def test(self):
-        print self.execute('select * from t_price_history;')
+        print self.execute('select * from t_price_history limit 10')
+        pass
+
+    def query_history(self, history_length, file_path):
+        price_list = []
+
+        ret, data = self.execute('select price from t_price_history order by updatetime desc limit %d' % (history_length))
+        if not ret:
+            logger.error('query history fail')
+            return ret
+
+        for item in data:
+            price_list.append(str(int(item[0])))
+
+        price_list.reverse()
+
+        fp = open(file_path, 'w')
+        fp.write('\r\n'.join(price_list))
+        fp.close()
+
+        logger.info('query history dump latest %d price data to file "%s"' % (history_length, file_path))
+
+        return ret
         pass
 
 def main():
     sqlite3 = Sqlite3()
-    sqlite3.test()
+    #sqlite3.test()
+    #sqlite3.query_history(60/10*60*24, 'price_history_data.txt')
     pass
 
 if __name__ == '__main__':
