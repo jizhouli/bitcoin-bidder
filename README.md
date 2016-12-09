@@ -56,8 +56,7 @@ _2013-11-08_
 
 ### 其他 ###
 
-* 鉴于急用，程序中还存在大量问题，有问题可随时与<Justinli.LJT@gmail.com>联系
-
+* 程序仍未妥善，有问题可随时沟通
 ___
 
 _本文档在__[Mou](http://mouapp.com/ "Mou, web developers' Markdown editor for Mac OS X.")__协助下完成
